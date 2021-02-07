@@ -1,0 +1,9 @@
+:root {
+    --fuentePrincipal:  'Open Sans', sans-serif;
+
+}
+
+.title {
+    font-family: var(--fuentePrincipal);
+    font-size: 70px;   
+}
