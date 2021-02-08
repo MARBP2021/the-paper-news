@@ -1,0 +1,120 @@
+:root {
+    --fuentePrincipal:  'Open Sans', sans-serif;
+    --gris: #707070;
+
+}
+
+body {
+
+    font-family: var(--fuentePrincipal);
+}
+
+header {
+
+    border-bottom: solid 1px;
+    margin: 0 0 20px 0 ;
+
+}
+
+
+/*  Header   */
+.encabezado{
+    font-size: 35px;
+    font-weight: 300;;
+}
+.menu{
+
+    width: 320px;
+}
+.menu-hamburger{
+    width: 48px;
+    height: 44px;
+    margin-left: 20px;
+    margin-right: 16px;
+    margin-top: 49px;
+}
+.menu-lupa{
+    width: 43px;
+    height: 43px;
+    margin-right: 6px;
+    margin-top: 54px;
+}
+
+.search{
+    border: solid 0.1;
+    border-color: var(--gris);
+    border-style: none;
+    border-bottom: solid 0.1px;
+    position: absolute;
+    top: 75px;
+    left: 150px;
+}
+
+.title {
+    position: absolute;
+    font-size: 70px; 
+    margin: 0;  
+    left: 436px;
+    top: 34px;
+    width: 550px;
+    font-weight: 600;
+    
+}
+
+.fecha{
+    margin-left: 597px;
+    display: flex;
+    font-size: 20px;
+    width: 200px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.temperatura-cloud{
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    left: 1239px;
+    top: 68px;
+}
+
+.temp{
+    position: absolute;
+    left: 1300px;
+    top: 83px;
+    display: flex;
+    
+}
+
+
+
+
+
+
+
+
+/* Diseño del main */
+
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-areas: "izquierda contenido derecha";
+        grid-template-columns: 20% 60% 20%;
+        grid-auto-flow: column;
+        column-gap: 2rem;
+        margin: 2rem;
+        
+    }
+
+}
+
+
+
+
+/* Diseño del footer */
+.footer{
+    
+  
+    
+}

@@ -1,85 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="style.css">
-    
-    
-    
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <!-- Reset CSS -->
+    <link rel="stylesheet" href="./styles/reset.min.css">    
+    <!-- Customize CSS -->
+    <link rel="stylesheet" href="./styles/style.css">
+    <title>The paper News</title>
 </head>
+
 <body>
+
     
-    <header>
-        <nav class = 'hamburguer'>
-            <img src = './images/menu-regular-96.png' alt = 'menu-hamburguesa'/>
-            <img src = './images/search-regular-96.png' alt = 'lupa'>
-            <input type = 'text'>
+<header class="header">
+        
+        <nav class = 'menu'> <!-- width: 48px heigth: 44px-->
+            
+            <img class="menu-hamburger" src = './images/menu-regular-96.png' alt = 'menu-hamburguesa'/>
+            
+            <img class="menu-lupa" src = './images/search-regular-96.png' alt = 'lupa'>
+            
+            <input class="search" type = 'text' placeholder="Search...">
         
         </nav>
 
+        <!--Titulo h1-->
         <h1 class = 'title'>The Paper News</h1>
+        
+        
         <div class = 'fecha'>
-            fecha
+
+            <p>DD/MM/AAAA</p>
+
         </div>
+        
         
         <div class = 'temperatura'>
             
-            <img src = './images/cloud-regular-96.png'>
-            temp
+            <img class="temperatura-cloud" src = './images/cloud-regular-96.png'>
+            <p class="temp">temp</p>
 
         </div>
-
 
     </header>
     
     
-    
-    <main>
-        <section class = 'principal'>
-            <h2>Principal</h2>
-            <img src = './images/sol.png' alt = 'principal'>
-            
-            <p class ='lorem-principal'>
+<div class="contenedor contenedor-grid">
 
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    <main class="contenido-principal">
 
-            </p>
-            
-        </section>
-        <section class = 'second'>
-            <h2>Second</h2>
-            
-            
-            <p class ='lorem-second'>
+            <article class = 'second'>
 
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                <h2 class="encabezado">Second</h2>
 
-            </p>
-            
-        </section>
-        <section class = 'third'>
-            <h2>Third</h2>
-            
-            
-            <p class ='lorem-second'>
+                <p class ='lorem-second'>
 
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
-            </p>
+                </p>
+                <a href="#">Ver más</a>
+                <br>
+            </article>
             
-        </section>
+            <article class = 'principal'>
+            
+                <h2 class="encabezado">Principal</h2>
+                <img src = './images/sol.png' alt = 'principal'>
+                
+                <p class ='lorem-principal'>
+
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+                </p>
+                <a href="#">Ver más</a>
+                <br>
+            </article>
+            
+            <article class = 'third'>
+                <h2 class="encabezado">Third</h2>
+                
+                
+                <p class ='lorem-second'>
+
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+                </p>
+                <a href="#">Ver más</a>
+                
+            </article>
 
     </main>
     
+</div>
 
 
 
+<footer class="footer">
 
-    
+    <p>&copy; Todos los derechos reservados 2021. <a href="#">Creado por desarrolladores</a></p>
+
+</footer>
+
+
+
 </body>
+
 </html>
