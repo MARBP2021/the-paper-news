@@ -1,0 +1,79 @@
+:root {
+    --fuentePrincipal:  'Open Sans', sans-serif;
+}
+
+body {
+    font-family: var(--fuentePrincipal);
+}
+
+.header {
+    box-shadow: 0 0 4px #b9b9b9;
+    display: grid;
+    grid-template: 60px / 1fr 5fr 1fr;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.header__toggle {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-self: start;
+    padding: 5px 6px;
+    background-color: #343434;
+    border: none;
+    border-radius: 3px;
+}
+
+.header__toggle svg {
+    color: #fefefe;
+    font-size: 24px;
+}
+
+.header__title {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header__weather {
+    display: none;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px){}
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px){
+    .header {
+        padding: 0 20px;
+    }
+
+    .header__weather {
+        display: flex;
+        align-items: center;
+        justify-self: end;
+        grid-gap: 5px;
+        padding: 5px 6px;
+        background-color: #343434;
+        border: none;
+        border-radius: 3px;
+    }
+    
+    .header__weather svg {
+        color: #fefefe;
+        font-size: 25px;
+    }
+    
+    .header__weather b {
+        color: #fefefe;
+        font-size: 15px;
+        font-weight: bold;
+    
+    }
+}
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px){}
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px){}
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px){}
