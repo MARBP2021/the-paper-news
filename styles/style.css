@@ -18,7 +18,10 @@ header {
 
 
 /*  Header   */
-
+.encabezado{
+    font-size: 35px;
+    font-weight: 300;;
+}
 .menu{
 
     width: 320px;
@@ -52,8 +55,9 @@ header {
     font-size: 70px; 
     margin: 0;  
     left: 436px;
-    top: 39px;
+    top: 34px;
     width: 550px;
+    font-weight: 600;
     
 }
 
@@ -62,6 +66,9 @@ header {
     display: flex;
     font-size: 20px;
     width: 200px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
 }
 
 .temperatura-cloud{
@@ -75,9 +82,39 @@ header {
 .temp{
     position: absolute;
     left: 1300px;
-    top: 68px;
+    top: 83px;
+    display: flex;
+    
 }
+
+
+
+
+
+
 
 
 /* Diseño del main */
 
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-areas: "izquierda contenido derecha";
+        grid-template-columns: 20% 60% 20%;
+        grid-auto-flow: column;
+        column-gap: 2rem;
+        margin: 2rem;
+        
+    }
+
+}
+
+
+
+
+/* Diseño del footer */
+.footer{
+    
+  
+    
+}
