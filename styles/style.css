@@ -1,79 +1,242 @@
 :root {
     --fuentePrincipal:  'Open Sans', sans-serif;
+    --gris: #707070;
+
 }
 
 body {
+
     font-family: var(--fuentePrincipal);
 }
 
-.header {
-    box-shadow: 0 0 4px #b9b9b9;
-    display: grid;
-    grid-template: 60px / 1fr 5fr 1fr;
-    align-items: center;
-    padding: 0 10px;
+
+@media(min-width: 1920px) and (max-width:2600px){
+
+header {
+
+    border-bottom: solid 1px ;
+    border-color: rgba(128, 128, 128, 0.651);
+   /*margin: 0 0 20px 0 ; */
+
 }
 
-.header__toggle {
+/*  Header   */
+h2{
+    font-size: 60px;
+    font-weight: 300;
+}
+h3 {
+
+    font-size: 40px;
+    font-weight: 300;
+
+
+}
+
+.menu{
+
+    width: 320px;
+}
+
+.menu-hamburger{
+    width: 48px;
+    height: 44px;
+    margin-left: 20px;
+    margin-right: 16px;
+    margin-top: 49px;
+}
+
+.menu-lupa{
+    width: 43px;
+    height: 43px;
+    margin-right: 6px;
+    margin-top: 54px;
+}
+
+.search{
+
+    border: solid 0.1;
+    border-color: var(--gris);
+    border-style: none;
+    border-bottom: solid 0.1px;
+    position: absolute;
+    top: 65px;
+    left: 150px;
+}
+
+.title {
+    position: absolute;
+    font-size: 70px; 
+    margin: 0;  
+    left: 702px;
+    top: 34px;
+    width: 550px;
+    
+    
+}
+
+.fecha{
+    font-size: 20px;
+    width: 200px;
     display: flex;
     align-items: center;
+    margin: 30px 0 0 908px; 
+
+}
+
+
+
+.temperatura-cloud{
+    
+    float: right;
+    width: 47px;
+    height: 47px;
+    margin: -102px 70px 0 0;
+    
+}
+
+.temp{
+
+    float: right;
+    margin-top: -92px;
+    margin-right: 20px;
+
+}
+
+/*NOTICIA PRINCIPAL */
+.principal{
+
+    background-color: rgba(128, 128, 128, 0.219);
+
+}
+
+.principal-encabezado{
+
     text-align: center;
-    justify-self: start;
-    padding: 5px 6px;
-    background-color: #343434;
-    border: none;
-    border-radius: 3px;
+    margin-top:30px;
+    margin-bottom: 30px;
 }
 
-.header__toggle svg {
-    color: #fefefe;
-    font-size: 24px;
+.principal-imagen {
+    width: 630px;
+    margin: 0 0 0 640px;
 }
 
-.header__title {
-    font-size: 22px;
-    font-weight: bold;
-    text-align: center;
+.parrafo-principal {
+    width: 650px;
+    margin: 50px 0 0 640px;
+
 }
 
-.header__weather {
-    display: none;
+.enlace-principal {
+    display:block;
+    margin: 30px 0 0 640px;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-@media (min-width: 576px){}
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px){
-    .header {
-        padding: 0 20px;
-    }
 
-    .header__weather {
-        display: flex;
-        align-items: center;
-        justify-self: end;
-        grid-gap: 5px;
-        padding: 5px 6px;
-        background-color: #343434;
-        border: none;
-        border-radius: 3px;
-    }
+
+/*NOTICIA COLUMNA IZQUIERDA */
+
+.second{
+    width: 476px;
+    height: 650px;
+    border-right: solid 0.5px;
+    position:absolute;
+    top:185px;
+    left: 25px;
     
-    .header__weather svg {
-        color: #fefefe;
-        font-size: 25px;
-    }
-    
-    .header__weather b {
-        color: #fefefe;
-        font-size: 15px;
-        font-weight: bold;
-    
-    }
+
 }
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px){}
-/* X-Large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px){}
-/* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px){}
+
+.second-encabezado{
+
+
+    margin-top:30px;
+    margin-bottom: 30px;
+
+
+}
+
+.parrafo-second{
+
+    width: 300px;    
+
+}
+.enlace-second{
+    
+    display:block;
+    margin-top: 30px;
+
+
+}
+
+/* NOTICIA CULUMNA DERECHA */
+
+.third {
+
+    position:absolute;
+    left:1420px;
+    top: 185px;
+    width: 600px;
+    height: 650px;
+    border-left: solid 1px;
+    
+
+}
+.third-encabezado{
+    width:100px;
+    margin-top: 30px;
+    margin-left:385px;
+    margin-bottom:30px;
+
+
+
+}
+
+.parrafo-third{
+    width: 300px;
+    margin-left: 180px;
+    text-align: left;
+  
+
+}
+.enlace-third{
+
+    display:block;
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 416px;
+
+
+}
+
+
+
+/* Diseño del main */
+/* 
+@media (min-width: 768px) {
+    .contenido-principal{
+        display: grid;
+        grid-template-areas: "izquierda contenido derecha";
+        grid-template-columns: 20% 60% 20%;
+        grid-auto-flow: column;
+        column-gap: 2rem;
+        margin: 2rem;
+        
+    }
+
+}
+
+
+
+
+/* Diseño del footer 
+.footer{
+    
+  
+    
+}
+*/
+
+}
+

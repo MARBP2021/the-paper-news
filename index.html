@@ -9,56 +9,109 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
     <!-- Reset CSS -->
-    <link rel="stylesheet" href="./styles/reset.min.css">
+    <link rel="stylesheet" href="./styles/reset.min.css">    
     <!-- Customize CSS -->
     <link rel="stylesheet" href="./styles/style.css">
-    <title>Document</title>
+    <title>The paper News</title>
 </head>
 
 <body>
-    <header>
-        <nav class='hamburguer'>
-            <img src='./images/menu-regular-96.png' alt='menu-hamburguesa' />
-            <img src='./images/search-regular-96.png' alt='lupa'>
-            <input type='text'>
-        </nav>
-        <h1 class='title'>The Paper News</h1>
-        <div class='fecha'>
-            fecha
-        </div>
-        <div class='temperatura'>
-            <img src='./images/cloud-regular-96.png'>
-            temp
-        </div>
-    </header>
-    <main>
-        <section class='principal'>
-            <h2>Principal</h2>
-            <img src='./images/sol.png' alt='principal'>
-            <p class='lorem-principal'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-            </p>
+
+    
+<header class="header header--principal">
+        
+    <nav class = 'menu'> <!-- width: 48px heigth: 44px-->
+            
+            <img class="menu-hamburger" src = './images/menu-regular-96.png' alt = 'menu-hamburguesa'/>
+            
+            <img class="menu-lupa" src = './images/search-regular-96.png' alt = 'lupa'>
+            
+            <input class="search" type = 'text' placeholder="Search...">
+        
+    </nav>
+
+        <!--Titulo h1-->
+        <h1 class = 'title'>The Paper News</h1>
+        
+
+        <p class ='fecha'>DD/MM/AAAA</p>
+
+        
+        <img class="temperatura-cloud" src = './images/cloud-regular-96.png'>
+        <p class="temp">temp</p>
+
+
+</header>
+    
+    
+<div class="contenedor contenedor-grid">
+
+    <main class="contenido-principal">
+        
+ 
+            <article class = 'principal'>
+            
+                <b><h2 class="principal-encabezado">Principal</h2></b>
+                <img src = './images/sol.png' alt = 'principal' class ='principal-imagen'>
+                
+                <p class ='parrafo-principal'>
+
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+                </p>
+                <a class = 'enlace-principal'href="#">Ver más</a>
+                <br>
+            </article>
+            <section>
+                <article class = 'second'>
+    
+                    <h3 class="second-encabezado">Second</h2>
+    
+                    <p class ='parrafo-second'>
+    
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+    
+                    </p>
+                    
+                    <a class ='enlace-second'href="#">Ver más</a>
+                    
+                    <br>
+                </article>
+            
+            <article class = 'third'>
+                
+                <h3 class="third-encabezado">Third</h2>
+                
+                
+                <p class ='parrafo-third'>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+
+
+                
+                </p>
+                
+                <a class ='enlace-third'href="#">Ver más</a>
+                
+            </article>
+
         </section>
-        <section class='second'>
-            <h2>Second</h2>
-            <p class='lorem-second'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-            </p>
-        </section>
-        <section class='third'>
-            <h2>Third</h2>
-            <p class='lorem-second'>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.
-            </p>
-        </section>
+
     </main>
-    <script src="./scripts/app.js"></script>
+    
+</div>
+
+
+
+<footer class="footer">
+
+    <p>&copy; Todos los derechos reservados 2021. <a href="#">Creado por desarrolladores</a></p>
+
+</footer>
+
+
+
 </body>
 
 </html>
