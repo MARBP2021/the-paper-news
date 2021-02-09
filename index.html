@@ -11,7 +11,7 @@
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./styles/reset.min.css">    
     <!-- Customize CSS -->
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/styles.css">
     <title>The paper News</title>
 </head>
 
@@ -22,23 +22,26 @@
         
     <nav class = 'menu'> <!-- width: 48px heigth: 44px-->
             
-            <img class="menu-hamburger" src = './images/menu-regular-96.png' alt = 'menu-hamburguesa'/>
+            <img class="menu__hamburger" src = './images/menu-regular-96.png' alt = 'menu-hamburguesa'/>
             
-            <img class="menu-lupa" src = './images/search-regular-96.png' alt = 'lupa'>
+            <img class="menu__lupa" src = './images/search-regular-96.png' alt = 'lupa'>
             
-            <input class="search" type = 'text' placeholder="Search...">
+            <input class="menu__search" type = 'text' placeholder="Search...">
         
     </nav>
 
         <!--Titulo h1-->
-        <h1 class = 'title'>The Paper News</h1>
         
+        <div class = 'header__tf'>
+        <h1 class = 'header__titulo'>The Paper News</h1>
+        <p class ='header__fecha'>DD/MM/AAAA</p>
+        </div>
 
-        <p class ='fecha'>DD/MM/AAAA</p>
-
+        <div class = 'temperatura'>
+        <p class="temperatura__texto">temp</p>
+        <img class="temperatura__cloud" src = './images/cloud-regular-96.png'>
         
-        <img class="temperatura-cloud" src = './images/cloud-regular-96.png'>
-        <p class="temp">temp</p>
+        </div>
 
 
 </header>
@@ -59,7 +62,7 @@
                     Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
 
                 </p>
-                <a class = 'enlace-principal'href="#">Ver más</a>
+                <a class = 'enlace-principal' href="./post.html">Ver más</a>
                 <br>
             </article>
             <section>
@@ -74,8 +77,8 @@
     
                     </p>
                     
-                    <a class ='enlace-second'href="#">Ver más</a>
-                    
+                    <a class ='enlace-second' href="./post.html">Ver más</a>
+                
                     <br>
                 </article>
             
@@ -92,7 +95,7 @@
                 
                 </p>
                 
-                <a class ='enlace-third'href="#">Ver más</a>
+                <a class ='enlace-third' href="./post.html">Ver más</a>
                 
             </article>
 
