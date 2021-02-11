@@ -141,28 +141,28 @@ body {
   .principal{
   
       background-color: rgba(128, 128, 128, 0.219);
-  
+
   }
   
-  .principal-encabezado{
+  .principal__encabezado{
   
       text-align: center;
       margin-top:30px;
       margin-bottom: 30px;
   }
   
-  .principal-imagen {
+  .principal__imagen {
       width: 630px;
       margin: 0 0 0 640px;
   }
   
-  .parrafo-principal {
+  .principal__parrafo {
       width: 650px;
       margin: 50px 0 0 640px;
   
   }
   
-  .enlace-principal {
+  .principal__enlace {
       display:block;
       margin: 30px 0 0 640px;
   }
@@ -182,7 +182,7 @@ body {
   
   }
   
-  .second-encabezado{
+  .second__encabezado{
   
   
       margin-top:30px;
@@ -191,12 +191,12 @@ body {
   
   }
   
-  .parrafo-second{
+  .second__parrafo{
   
       width: 300px;    
   
   }
-  .enlace-second{
+  .second__enlace{
       
       display:block;
       margin-top: 30px;
@@ -216,20 +216,20 @@ body {
       border-left: solid 1px;
   }
   
-  .third-encabezado{
+  .third__encabezado{
       width:100px;
       margin-top: 30px;
       margin-left:385px;
       margin-bottom:30px;
   }
   
-  .parrafo-third{
+  .third__parrafo{
       width: 300px;
       margin-left: 180px;
       text-align: right;
   }
 
-  .enlace-third{
+  .third__enlace{
   
       display:block;
       width: 100px;
