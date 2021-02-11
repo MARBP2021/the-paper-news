@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600;700;900&family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
     <!-- Reset CSS -->
     <link rel="stylesheet" href="./styles/reset.min.css">    
     <!-- Customize CSS -->
     <link rel="stylesheet" href="./styles/styles.css">
-    <title>The paper News</title>
+    <title>The Paper News</title>
 </head>
 
 <body>
@@ -20,28 +20,28 @@
     
 <header class="header header--principal">
         
-    <nav class = 'menu'> <!-- width: 48px heigth: 44px-->
-            
-            <img class="menu__hamburger" src = './images/menu-regular-96.png' alt = 'menu-hamburguesa'/>
-            
-            <img class="menu__lupa" src = './images/search-regular-96.png' alt = 'lupa'>
-            
-            <input class="menu__search" type = 'text' placeholder="Search...">
+    <div class="limiter">
+        <nav class = 'menu'> <!-- width: 48px heigth: 44px-->
         
-    </nav>
-
-        <!--Titulo h1-->
+                <img class="menu__hamburger" src = './images/menu-regular-96.png' alt = 'menu-hamburguesa'/>
         
-        <div class = 'header__tf'>
-        <h1 class = 'header__titulo'>The Paper News</h1>
-        <p class ='header__fecha'>DD/MM/AAAA</p>
-        </div>
-
-        <div class = 'temperatura'>
-        <p class="temperatura__texto">temp</p>
-        <img class="temperatura__cloud" src = './images/cloud-regular-96.png'>
+                <img class="menu__lupa" src = './images/search-regular-96.png' alt = 'lupa'>
         
-        </div>
+                <input class="menu__search" type = 'text' placeholder="Search...">
+        
+        </nav>
+            <!--Titulo h1-->
+        
+            <div class = 'header__tf'>
+            <h1 class = 'header__titulo'>The Paper News</h1>
+            <p class ='header__fecha'>DD/MM/AAAA</p>
+            </div>
+            <div class = 'temperatura'>
+            <p class="temperatura__texto">temp</p>
+            <img class="temperatura__cloud" src = './images/cloud-regular-96.png'>
+        
+            </div>
+    </div>
 
 
 </header>
