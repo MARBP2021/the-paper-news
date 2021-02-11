@@ -106,7 +106,8 @@ body {
 
 /* ----------------------index.html ---------------------------------------------------*/
   
-@media(min-width: 1920px) and (max-width:2600px){
+@media(min-width: 1920px){
+    
     .header--principal {
         border-bottom: solid 1px ;
         border-color: rgba(128, 128, 128, 0.651);
@@ -116,7 +117,7 @@ body {
 
     /*  Header   */
     h2{
-        font-size: 60px;
+        font-size: 40px;
         font-weight: 300;
     }
 
@@ -156,12 +157,15 @@ body {
     }
 
     .header__titulo {
+        font-size: 70px;  
+        font-family: var(--font-primary);
+        font-weight: bold;
         position: absolute;
-        font-size: 70px; 
-        margin: 0;  
         left: 702px;
         top: 34px;
         width: 550px;
+      
+       
     }
 
     .header__fecha{
@@ -257,9 +261,11 @@ body {
   
   .principal__encabezado{
   
+
       text-align: center;
-      margin-top:30px;
+      margin-top:250px;
       margin-bottom: 30px;
+      
   }
   
   .principal__imagen {
@@ -284,13 +290,12 @@ body {
   
   .second{
       width: 476px;
-      height: 650px;
+      height: 590px;
       border-right: solid 0.5px;
       position:absolute;
-      top:230px;
+      top:250px;
       left: 25px;
-      
-  
+
   }
   
   .second__encabezado{
@@ -321,9 +326,9 @@ body {
   
       position:absolute;
       left:1420px;
-      top: 230px;
+      top: 250px;
       width: 600px;
-      height: 650px;
+      height: 590px;
       border-left: solid 1px;
   }
   
@@ -348,6 +353,16 @@ body {
       margin-left: 416px;
   }
   
+
+  .footer_parrafo {
+
+    display:flex;
+    justify-content:center;
+    margin-top: 50px;
+
+
+
+  }
   
   
   
