@@ -12,13 +12,15 @@ body {
 }
   
 .header {
-    box-shadow: 0 0 1.5px #6d6d6d;
+    box-shadow: 0 0 5px 1px #00000047;
+    border-bottom: 1px solid #cccccc;
     padding: 0 10px;
     position: fixed;
     top: 0;
     background-color: #fefefe;
     left: 0;
     width: 100%;
+    z-index: 90;
 }
 
 .limiter {
@@ -103,6 +105,41 @@ body {
     padding: 0 20px;
 }
 
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 5px 4px 1px #00000047;
+    border-right: 1px solid #cccccc;
+    height: calc(100vh - 55.5px);
+    left: -231px;
+    padding: 10px 15px;
+    position: fixed;
+    top: 55.5px;
+    width: 230px;
+    z-index: 100;
+    overflow-y: scroll;
+    transition: left 0.4s ease-in-out;
+}
+
+.navbar ul {
+    display: grid;
+    grid-gap: 5px;
+}
+
+.navbar__item {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.navbar__item a {
+    border-radius: 3px;
+    color: #000000;
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+}
+
+/* ----------------------index.html ---------------------------------------------------*/
   
 @media(min-width: 1920px) and (max-width:2600px){
     .header--principal {
@@ -451,6 +488,41 @@ body {
 
     .paragraph {
         padding: 0;
+    }
+
+    .navbar::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        -webkit-appearance: none;
+        background-color: #ECEFE8;
+    }
+    
+    .navbar::-webkit-scrollbar:vertical,
+    body::-webkit-scrollbar:vertical {
+        width:10px;
+    }
+    
+    .navbar::-webkit-scrollbar-button:increment,
+    body::-webkit-scrollbar-button:increment,
+    .navbar::-webkit-scrollbar-button,
+    body::-webkit-scrollbar-button {
+        display: none;
+    } 
+    
+    .navbar::-webkit-scrollbar:horizontal,
+    body::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    
+    .navbar::-webkit-scrollbar-thumb,
+    body::-webkit-scrollbar-thumb {
+        background-color: #797979;
+        border-radius: 20px;
+        border: 2px solid #797979;
+    }
+    
+    .navbar::-webkit-scrollbar-track,
+    body::-webkit-scrollbar-track {
+        border-radius: 10px;  
     }
 }
 
