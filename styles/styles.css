@@ -1,5 +1,3 @@
-
-
 :root {
     --font-primary: 'Source Serif Pro', serif;
     --font-second: 'UnifrakturCook', cursive;
@@ -14,13 +12,15 @@ body {
 }
   
 .header {
-    box-shadow: 0 0 1.5px #6d6d6d;
+    box-shadow: 0 0 5px 1px #00000047;
+    border-bottom: 1px solid #cccccc;
     padding: 0 10px;
     position: fixed;
     top: 0;
     background-color: #fefefe;
     left: 0;
     width: 100%;
+    z-index: 90;
 }
 
 .limiter {
@@ -105,11 +105,318 @@ body {
     padding: 0 20px;
 }
 
+.navbar {
+    background: #ffffff;
+    box-shadow: 0 5px 4px 1px #00000047;
+    border-right: 1px solid #cccccc;
+    height: calc(100vh - 55.5px);
+    left: -231px;
+    padding: 10px 15px;
+    position: fixed;
+    top: 55.5px;
+    width: 230px;
+    z-index: 100;
+    overflow-y: scroll;
+    transition: left 0.4s ease-in-out;
+}
+
+.navbar ul {
+    display: grid;
+    grid-gap: 5px;
+}
+
+.navbar__item {
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.navbar__item a {
+    border-radius: 3px;
+    color: #000000;
+    display: block;
+    padding: 7px;
+    text-decoration: none;
+}
+
+
 
 
 
   
+@media(min-width: 1920px){
+    
+    
+
+    .header--principal {
+        border-bottom: solid 1px ;
+        border-color: rgba(128, 128, 128, 0.651);
+        height: 200px;
+        
+    }
+    
+    h2{
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    h3 {
+        font-size: 40px;
+        font-weight: 300;
+    }
+
+    .menu{
+        width: 320px;
+        margin-left:-154px;
+    }
+
+    .menu__hamburger{
+        width: 48px;
+        height: 44px;
+        margin-left: 20px;
+        margin-right: 16px;
+        margin-top: 49px;
+    }
+
+    .menu__lupa{
+        width: 43px;
+        height: 43px;
+        margin-right: 6px;
+        margin-top: 54px;
+    }
+
+    .menu__search{
+        border: solid 0.1;
+        border-color: var(--color-gray);
+        border-style: none;
+        border-bottom: solid 0.1px;
+        position: absolute;
+        top: 47px;
+        left: 165px;
+    }
+
+    .header__titulo {
+        font-size: 70px;  
+        font-family: var(--font-primary);
+        font-weight: bold;
+        position: absolute;
+        left: 702px;
+        top: 34px;
+        width: 550px;
+      
+       
+    }
+
+    .header__fecha{
+        font-size: 20px;
+        width: 200px;
+        margin: 250px 0 0 400px; 
+    }
+
+
   
+  }
+  
+  .menu{
+  
+      width: 320px;
+  }
+  
+  .menu__hamburger{
+      width: 48px;
+      height: 44px;
+      margin-left: 20px;
+      margin-right: 16px;
+      margin-top: 49px;
+  }
+  
+  .menu__lupa{
+      width: 43px;
+      height: 43px;
+      margin-right: 6px;
+      margin-top: 54px;
+  }
+  
+  .menu__search{
+  
+      border: solid 0.1;
+      border-color: var(--gris);
+      border-style: none;
+      border-bottom: solid 0.1px;
+      position: absolute;
+      top: 47px;
+      left: 165px;
+  }
+  
+  .header__titulo {
+      position: absolute;
+      font-size: 70px; 
+      margin: 0;  
+      left: 702px;
+      top: 34px;
+      width: 550px;
+      
+      
+  }
+  
+  .header__fecha{
+      font-size: 20px;
+      width: 200px;
+      margin: 250px 0 0 566px; 
+      position:absolute;
+      top: -100px;
+      left: 343px;
+  
+  }
+  
+
+
+  .temperatura {
+
+    width: 100px;
+    margin-top:45px;
+    margin-left: 100px;
+
+  }
+  
+  .temperatura__cloud{
+      
+      
+      width: 47px;
+      height: 47px;
+
+      
+  }
+  
+  .temperatura__texto{
+      display:inline;
+      margin-left: 0;
+      
+     
+  
+  }
+
+
+
+
+
+
+  
+  /*NOTICIA PRINCIPAL */ 
+  .principal{
+  
+      background-color: rgba(128, 128, 128, 0.219);
+
+  }
+  
+  .principal__encabezado{
+  
+
+      text-align: center;
+      margin-top:250px;
+      margin-bottom: 30px;
+      
+  }
+  
+  .principal__imagen {
+      width: 630px;
+      margin: 0 0 0 640px;
+  }
+  
+  .principal__parrafo {
+      width: 650px;
+      margin: 50px 0 0 640px;
+  
+  }
+  
+  .principal__enlace {
+      display:block;
+      margin: 30px 0 0 640px;
+  }
+  
+  
+  
+  /*NOTICIA COLUMNA IZQUIERDA */ 
+  
+  .second{
+      width: 476px;
+      height: 590px;
+      border-right: solid 0.5px;
+      position:absolute;
+      top:250px;
+      left: 25px;
+
+  }
+  
+  .second__encabezado{
+  
+  
+      margin-top:30px;
+      margin-bottom: 30px;
+  
+  
+  }
+  
+  .second__parrafo{
+  
+      width: 300px;    
+  
+  }
+  .second__enlace{
+      
+      display:block;
+      margin-top: 30px;
+  
+  
+  }
+  
+  /* NOTICIA CULUMNA DERECHA */ 
+  
+  .third {
+  
+      position:absolute;
+      left:1420px;
+      top: 250px;
+      width: 600px;
+      height: 590px;
+      border-left: solid 1px;
+  }
+  
+  .third__encabezado{
+      width:100px;
+      margin-top: 30px;
+      margin-left:385px;
+      margin-bottom:30px;
+  }
+  
+  .third__parrafo{
+      width: 300px;
+      margin-left: 180px;
+      text-align: right;
+  }
+
+  .third__enlace{
+  
+      display:block;
+      width: 100px;
+      margin-top: 30px;
+      margin-left: 416px;
+  }
+  
+
+  .footer_parrafo {
+
+    display:flex;
+    justify-content:center;
+    margin-top: 50px;
+
+
+
+  }
+  
+  
+  
+}
 
 
 
@@ -172,9 +479,44 @@ body {
     .banner--compact {
         max-width: 600px;
     }
-    main
+
     .paragraph {
         padding: 0;
+    }
+
+    .navbar::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        -webkit-appearance: none;
+        background-color: #ECEFE8;
+    }
+    
+    .navbar::-webkit-scrollbar:vertical,
+    body::-webkit-scrollbar:vertical {
+        width:10px;
+    }
+    
+    .navbar::-webkit-scrollbar-button:increment,
+    body::-webkit-scrollbar-button:increment,
+    .navbar::-webkit-scrollbar-button,
+    body::-webkit-scrollbar-button {
+        display: none;
+    } 
+    
+    .navbar::-webkit-scrollbar:horizontal,
+    body::-webkit-scrollbar:horizontal {
+        height: 10px;
+    }
+    
+    .navbar::-webkit-scrollbar-thumb,
+    body::-webkit-scrollbar-thumb {
+        background-color: #797979;
+        border-radius: 20px;
+        border: 2px solid #797979;
+    }
+    
+    .navbar::-webkit-scrollbar-track,
+    body::-webkit-scrollbar-track {
+        border-radius: 10px;  
     }
 }
 
@@ -201,287 +543,10 @@ body {
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
-@media (min-width: 1400px){
 
- 
-    /*--------index.html--------------*/
-    .header--principal {
-        border-bottom: solid 1px ;
-        border-color: rgba(128, 128, 128, 0.651);
-        background-color: white;
-        height: 200px;
-        width: 100%;
-        
-    }
+@media (min-width: 1400px) and (max-width: 1919px){ 
 
-    h2{
-        font-size: 40px;
-        font-weight: 300;
-    }
-
-    h3 {
-        font-size: 40px;
-        font-weight: 300;
-    }
-
-    .menu{
-        width: 320px;
-        margin-left:-200px;
-    }
-
-    .menu__hamburger{
-        width: 48px;
-        height: 44px;
-        margin-left: 20px;
-        margin-right: 16px;
-        margin-top: 49px;
-    }
-
-    .menu__lupa{
-        width: 43px;
-        height: 43px;
-        margin-right: 6px;
-        margin-top: 54px;
-    }
-
-    .menu__search{
-        border: solid 0.1;
-        border-color: var(--color-gray);
-        border-style: none;
-        border-bottom: solid 0.1px;
-        position: absolute;
-        top: 47px;
-        left: 165px;
-    }
-
-    .header__titulo {
-        font-size: 70px;  
-        font-family: var(--font-primary);
-        font-weight: bold;
-        position: absolute;
-        left: 702px;
-        top: 34px;
-        width: 550px;
-      
-       
-    }
-
-    .header__fecha{
-        font-size: 20px;
-        width: 200px;
-        margin: 250px 0 0 290px; 
-    }
-
-
-    .temperatura {
-        position:relative;
-        left: 150px;
-        
-
-    }
-    .temperatura__cloud{
-     
-      font-weight: 300;
-  
-  
-  }
-  
-  .menu{
-  
-      width: 320px;
-  }
-  
-  .menu__hamburger{
-      width: 48px;
-      height: 44px;
-      margin-left: 20px;
-      margin-right: 16px;
-      margin-top: 49px;
-  }
-  
-  .menu__lupa{
-      width: 43px;
-      height: 43px;
-      margin-right: 6px;
-      margin-top: 54px;
-  }
-  
-  .menu__search{
-  
-      border: solid 0.1;
-      border-color: var(--gris);
-      border-style: none;
-      border-bottom: solid 0.1px;
-      position: absolute;
-      top: 47px;
-      left: 165px;
-  }
-  
-  .header__titulo {
-      position: absolute;
-      font-size: 70px; 
-      margin: 0;  
-      left: 702px;
-      top: 34px;
-      width: 550px;
-      
-      
-  }
-  
-  .header__fecha{
-      font-size: 20px;
-      width: 200px;
-      margin: 250px 0 0 566px; 
-      position:absolute;
-      top: -100px;
-      left: 343px;
-  
-  }
-  
-  
-  
-  .temperatura__cloud{
-      
-      float: right;
-      width: 47px;
-      height: 47px;
-      margin: 55px 5px 0 0;
-      
-  }
-  
-  .temperatura__texto{
-  
-      float: right;
-      margin-top:70px;
-      margin-right:0px;
-  
-  }
-  
-  /*NOTICIA PRINCIPAL */
-  .principal{
-  
-      background-color: rgba(128, 128, 128, 0.219);
-      width: 1400px;
-  }
-  
-  .principal__encabezado{
-  
-
-      text-align: center;
-      margin-top:250px;
-      margin-bottom: 30px;
-      margin-left: 550px
-      
-  }
-  
-  .principal__imagen {
-      width: 630px;
-      margin: 0 0 0 640px;
-  }
-  
-  .principal__parrafo {
-      width: 650px;
-      margin: 50px 0 0 640px;
-     
-  
-  }
-  
-  .principal__enlace {
-      display:block;
-      margin: 30px 0 0 640px;
-  }
-  
-  
-  
-  /*NOTICIA COLUMNA IZQUIERDA */
-  
-  .second{
-      width: 476px;
-      height: 590px;
-      border-right: solid 0.5px;
-      position:absolute;
-      top:250px;
-      left: 25px;
-
-  }
-  
-  .second__encabezado{
-  
-  
-      margin-top:30px;
-      margin-bottom: 30px;
-  
-  
-  }
-  
-  .second__parrafo{
-  
-      width: 300px;    
-      
-  
-  }
-  .second__enlace{
-      
-      display:block;
-      margin-top: 30px;
-  
-  
-  }
-  
-  /* NOTICIA CULUMNA DERECHA */
-  
-  .third {
-  
-      position:absolute;
-      left:1420px;
-      top: 250px;
-      width: 600px;
-      height: 590px;
-      border-left: solid 1px;
-  }
-  
-  .third__encabezado{
-      width:100px;
-      margin-top: 30px;
-      margin-left:385px;
-      margin-bottom:30px;
-  }
-  
-  .third__parrafo{
-      width: 300px;
-      margin-left: 180px;
-      text-align: right;
-  }
-
-  .third__enlace{
-  
-      display:block;
-      width: 100px;
-      margin-top: 30px;
-      margin-left: 416px;
-  }
-  
-
-  .footer_parrafo {
-
-    display:flex;
-    justify-content:center;
-    margin-top: 50px;
-
-
-
-  }
-  
-
-
-
-
-
-}
-
-  
-@media(min-width: 1920px){
-    /* ----------------------index.html ---------------------------------------------------*/
+/*---------index.html ------------*/
 
     .header--principal {
         border-bottom: solid 1px ;
@@ -502,8 +567,9 @@ body {
     }
 
     .menu{
+        
         width: 320px;
-        margin-left:-200px;
+        margin-left:2px;
     }
 
     .menu__hamburger{
@@ -536,7 +602,7 @@ body {
         font-family: var(--font-primary);
         font-weight: bold;
         position: absolute;
-        left: 702px;
+        left: 480px;
         top: 34px;
         width: 550px;
       
@@ -546,91 +612,50 @@ body {
     .header__fecha{
         font-size: 20px;
         width: 200px;
-        margin: 250px 0 0 400px; 
+        margin: 250px 0 0 325px; 
     }
 
-    .temperatura__cloud{
-        
-      font-weight: 300;
-  
-  
+
+    
+  .temperatura{
+    width: 100px;
+    margin-top:55px;
+    margin-left: 0px;
+
+
+
+
   }
-  
-  .menu{
-  
-      width: 320px;
-      
-  }
-  
-  .menu__hamburger{
-      width: 48px;
-      height: 44px;
-      margin-left: 20px;
-      margin-right: 16px;
-      margin-top: 49px;
-  }
-  
-  .menu__lupa{
-      width: 43px;
-      height: 43px;
-      margin-right: 6px;
-      margin-top: 54px;
-  }
-  
-  .menu__search{
-  
-      border: solid 0.1;
-      border-color: var(--gris);
-      border-style: none;
-      border-bottom: solid 0.1px;
-      position: absolute;
-      top: 47px;
-      left: 165px;
-  }
-  
-  .header__titulo {
-      position: absolute;
-      font-size: 70px; 
-      margin: 0;  
-      left: 702px;
-      top: 34px;
-      width: 550px;
-      
-      
-  }
-  
-  .header__fecha{
-      font-size: 20px;
-      width: 200px;
-      margin: 250px 0 0 566px; 
-      position:absolute;
-      top: -100px;
-      left: 343px;
-  
-  }
-  
-  
+
   
   .temperatura__cloud{
+    
       
-      float: right;
       width: 47px;
-      margin: 55px 50px 0 0;
+      height: 47px;
+
       
   }
   
   .temperatura__texto{
   
-      float: right;
-      margin-top:70px;
-      margin-right:60px;
+    display:inline;
+    margin-right:0px;
+    
   
   }
-  
-  /*NOTICIA PRINCIPAL */
+
+  .menu__search {
+
+    width:130px;
+
+  }
+   
+
   .principal{
   
       background-color: rgba(128, 128, 128, 0.219);
+     
 
   }
   
@@ -640,109 +665,113 @@ body {
       text-align: center;
       margin-top:250px;
       margin-bottom: 30px;
-      margin-right: 510px;
+      margin-left:35px;
+      
   }
   
   .principal__imagen {
-      width: 630px;
-      margin: 0 0 0 640px;
+      width: 620px;
+      margin: 0 0 0 400px;
+   
   }
   
   .principal__parrafo {
-      width: 650px;
-      margin: 50px 0 0 640px;
+      width: 500px;
+      margin: 50px 0 0 420px;
   
   }
   
   .principal__enlace {
       display:block;
-      margin: 30px 0 0 640px;
+      margin: 30px 0 0 420px;
   }
-  
-  
-  
-  /*NOTICIA COLUMNA IZQUIERDA */
-  
+
+ 
+/*noticia columna izquierda */
+
   .second{
-      width: 476px;
-      height: 590px;
-      border-right: solid 0.5px;
-      position:absolute;
-      top:250px;
-      left: 25px;
-
-  }
-  
-  .second__encabezado{
-  
-  
-      margin-top:30px;
-      margin-bottom: 30px;
-  
-  
-  }
-  
-  .second__parrafo{
-  
-      width: 300px;    
-  
-  }
-  .second__enlace{
-      
-      display:block;
-      margin-top: 30px;
-  
-  
-  }
-  
-  /* NOTICIA CULUMNA DERECHA */
-
-  .third {
-  
-      position:absolute;
-      left:1420px;
-      top: 250px;
-      width: 600px;
-      height: 590px;
-      border-left: solid 1px;
-      
-  }
-  
-  .third__encabezado{
-      width:100px;
-      margin-top: 30px;
-      margin-left:385px;
-      margin-bottom:30px;
-  }
-  
-  .third__parrafo{
-      width: 300px;
-      margin-left: 180px;
-      text-align: right;
-  }
-
-  .third__enlace{
-  
-      display:block;
-      width: 100px;
-      margin-top: 30px;
-      margin-left: 416px;
-  }
+    width: 330px;
+    height: 606px;
+    border-right: solid 0.5px;
+    position:absolute;
+    top:250px;
+    left:30px;
   
 
-  .footer_parrafo {
+}
 
-    display:flex;
-    justify-content:center;
-    margin-top: 50px;
+.second__encabezado{
 
 
+    margin-top:30px;
+    margin-bottom: 30px;
 
-  }
+
+}
+
+.second__parrafo{
+
+    width: 300px;    
+
+}
+.second__enlace{
+    
+    display:block;
+    margin-top: 30px;
+
+
+}
+/* noticia columna derecha */
+.third {
+   position:absolute;
+   top: 250px;
+   left:1070px;
+   border-left: solid 0.5px;
+   height: 606px;
+ 
+
+   
+}
+
+.third__encabezado{
+    width:100px;
+    margin-top: 30px;
+    margin-left:225px;
+    margin-bottom:30px;
+    
+}
+
+.third__parrafo{
+    width: 300px;
+    margin-left: 20px;
+    text-align: right;
+   
+}
+
+.third__enlace{
+
+    display:block;
+    width: 100px;
+    margin-top: 30px;
+    margin-left: 255px;
+}
+
+
+.footer_parrafo {
+
+  display:flex;
+  justify-content:center;
+  margin-top: 50px;
+
+
+
+}
+
   
-   /* ----------------------index.html ---------------------------------------------------*/
-  
-  }
+
+
+}
+
 
 
 
