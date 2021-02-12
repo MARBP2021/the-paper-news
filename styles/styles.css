@@ -141,7 +141,8 @@ body {
 
 /* ----------------------index.html ---------------------------------------------------*/
   
-@media(min-width: 1920px) and (max-width:2600px){
+@media(min-width: 1920px){
+    
     .header--principal {
         border-bottom: solid 1px ;
         border-color: rgba(128, 128, 128, 0.651);
@@ -151,7 +152,7 @@ body {
 
     /*  Header   */
     h2{
-        font-size: 60px;
+        font-size: 40px;
         font-weight: 300;
     }
 
@@ -162,6 +163,7 @@ body {
 
     .menu{
         width: 320px;
+        margin-left:-154px;
     }
 
     .menu__hamburger{
@@ -190,18 +192,21 @@ body {
     }
 
     .header__titulo {
+        font-size: 70px;  
+        font-family: var(--font-primary);
+        font-weight: bold;
         position: absolute;
-        font-size: 70px; 
-        margin: 0;  
         left: 702px;
         top: 34px;
         width: 550px;
+      
+       
     }
 
     .header__fecha{
         font-size: 20px;
         width: 200px;
-        margin: 250px 0 0 566px; 
+        margin: 250px 0 0 400px; 
     }
 
     .temperatura__cloud{
@@ -257,6 +262,9 @@ body {
       font-size: 20px;
       width: 200px;
       margin: 250px 0 0 566px; 
+      position:absolute;
+      top: -100px;
+      left: 343px;
   
   }
   
@@ -288,9 +296,11 @@ body {
   
   .principal__encabezado{
   
+
       text-align: center;
-      margin-top:30px;
+      margin-top:250px;
       margin-bottom: 30px;
+      
   }
   
   .principal__imagen {
@@ -315,13 +325,12 @@ body {
   
   .second{
       width: 476px;
-      height: 650px;
+      height: 590px;
       border-right: solid 0.5px;
       position:absolute;
-      top:230px;
+      top:250px;
       left: 25px;
-      
-  
+
   }
   
   .second__encabezado{
@@ -352,9 +361,9 @@ body {
   
       position:absolute;
       left:1420px;
-      top: 230px;
+      top: 250px;
       width: 600px;
-      height: 650px;
+      height: 590px;
       border-left: solid 1px;
   }
   
@@ -379,56 +388,35 @@ body {
       margin-left: 416px;
   }
   
-  
-  
-  /* Diseño del main */
-  /* 
-  @media (min-width: 768px) {
-      .contenido-principal{
-          display: grid;
-          grid-template-areas: "izquierda contenido derecha";
-          grid-template-columns: 20% 60% 20%;
-          grid-auto-flow: column;
-          column-gap: 2rem;
-          margin: 2rem;
-          
-      }
-  
+
+  .footer_parrafo {
+
+    display:flex;
+    justify-content:center;
+    margin-top: 50px;
+
+
+
   }
   
   
-  
-  
-  /* Diseño del footer 
-  .footer{
-      
-    
-      
-  }
-  */
   
   }
   
   
 
 
-    /* Diseño del footer */
-    /* .footer{} */
+/* ------------------------------------------------------------------------*/
 
 
-/* Diseño del main */
-/* @media (min-width: 768px) {
-    .contenido-principal{
-        display: grid;
-        grid-template-areas: "izquierda contenido derecha";
-        grid-template-columns: 20% 60% 20%;
-        grid-auto-flow: column;
-        column-gap: 2rem;
-        margin: 2rem;
-    }
-} */
 
-  
+
+
+
+
+/* ----------------------------------------post.html ----------------------------------*/
+
+
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
     .paragraph {
@@ -443,6 +431,7 @@ body {
 }
 
 /* Medium devices (tablets, 768px and up) */
+
 @media (min-width: 768px) {
     .header__title {
         font-size: 32px;
@@ -550,3 +539,11 @@ body {
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px){}
+
+
+
+
+
+
+
+/* ------------------------------------------------------------------------*/
