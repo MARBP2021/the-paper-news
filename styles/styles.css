@@ -416,7 +416,7 @@ body {
   
   
   
-}
+
 
 
 
@@ -620,7 +620,7 @@ body {
   .temperatura{
     width: 100px;
     margin-top:55px;
-    margin-left: 0px;
+    margin-left: -200px;
 
 
 
