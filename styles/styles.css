@@ -10,6 +10,8 @@ body {
     font-family: var(--font-primary);
     color: var(--color-primary);
 }
+
+/* Post.html */
   
 .header {
     box-shadow: 0 0 5px 1px #00000047;
@@ -31,7 +33,7 @@ body {
     margin: 0 auto;
 }
   
-.header__toggle {
+.header__toggle-navbar {
     display: flex;
     align-items: center;
     text-align: center;
@@ -41,7 +43,7 @@ body {
     border: none;
 }
   
-.header__toggle svg {
+.header__toggle-navbar svg {
     color: #343434;
     font-size: 20px;
 }
@@ -118,6 +120,9 @@ body {
     z-index: 100;
     overflow-y: scroll;
     transition: left 0.4s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 18px;
 }
 
 .navbar ul {
@@ -160,9 +165,17 @@ body {
         font-weight: 300;
     }
 
-    .menu{
-        width: 320px;
-        margin-left:-154px;
+    .iconify--hambuguer{
+
+        margin-top:200px;
+
+
+    }
+
+    .menu {
+        margin-top: 50px;
+
+
     }
 
     .menu__hamburger{
@@ -412,24 +425,6 @@ body {
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-    .paragraph {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .banner--compact {
-        max-width: 600px;
-        margin: 0 auto;
-    }
-}
-
-/* Medium devices (tablets, 768px and up) */
-
-@media (min-width: 768px) {
-    .header__title {
-        font-size: 32px;
-    }
-
     .header__weather {
         display: flex;
         align-items: center;
@@ -450,6 +445,24 @@ body {
         color: var(--icon-primary);
         font-size: 14px;
         font-weight: bold;
+    }
+
+    .paragraph {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .banner--compact {
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+
+@media (min-width: 768px) {
+    .header__title {
+        font-size: 32px;
     }
 
     .article__title {
@@ -506,10 +519,39 @@ body {
     body::-webkit-scrollbar-track {
         border-radius: 10px;  
     }
+
+    div[data-position="left"] {
+        display: grid;
+        grid-template: 1fr / repeat(2, 32px);
+        grid-gap: 10px;
+        position: relative;
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
 @media (min-width: 992px){
+    .header__toggle-search {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 5px 6px;
+        background-color: transparent;
+        border: none;
+    }
+    
+    .header__toggle-search svg {
+        color: #343434;
+        font-size: 16px;
+    }
+
+    .search-bar--navbar {
+        display: none;
+    }
+
+    .search-bar--post {
+        display: grid;
+    }
+
     .banner__description {
         font-size: 15px;
     }

@@ -1,5 +1,5 @@
 export default function toggleMenu() {
-    const $button = document.querySelector(".header__toggle");
+    const $button = document.querySelector(".header__toggle-navbar");
     const $navbar = document.querySelector(".navbar");
 
     $button.addEventListener("click", () => {
