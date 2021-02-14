@@ -139,11 +139,6 @@ body {
     text-decoration: none;
 }
 
-
-
-
-
-  
 @media(min-width: 1920px){
     
     
@@ -215,8 +210,7 @@ body {
 
 
   
-  }
-  
+    
   .menu{
   
       width: 320px;
@@ -413,14 +407,8 @@ body {
 
 
   }
-  
-  
-  
-
-
-
-
-
+}
+   
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
@@ -546,236 +534,229 @@ body {
 
 @media (min-width: 1400px) and (max-width: 1919px){ 
 
-/*---------index.html ------------*/
-
-    .header--principal {
-        border-bottom: solid 1px ;
-        border-color: rgba(128, 128, 128, 0.651);
-        height: 200px;
-        /*margin: 0 0 20px 0 ; */
-    }
-
-    /*  Header   */
-    h2{
-        font-size: 40px;
-        font-weight: 300;
-    }
-
-    h3 {
-        font-size: 40px;
-        font-weight: 300;
-    }
-
-    .menu{
+    /*---------index.html ------------*/
+    
+        .header--principal {
+            border-bottom: solid 1px ;
+            border-color: rgba(128, 128, 128, 0.651);
+            height: 200px;
+            /*margin: 0 0 20px 0 ; */
+        }
+    
+        h2{
+            font-size: 40px;
+            font-weight: 300;
+        }
+    
+        h3 {
+            font-size: 40px;
+            font-weight: 300;
+        }
+    
+        .menu{
+            
+            width: 320px;
+            margin-left:2px;
+        }
+    
+        .menu__hamburger{
+            width: 48px;
+            height: 44px;
+            margin-left: 20px;
+            margin-right: 16px;
+            margin-top: 49px;
+        }
+    
+        .menu__lupa{
+            width: 43px;
+            height: 43px;
+            margin-right: 6px;
+            margin-top: 54px;
+        }
+    
+        .menu__search{
+            border: solid 0.1;
+            border-color: var(--color-gray);
+            border-style: none;
+            border-bottom: solid 0.1px;
+            position: absolute;
+            top: 47px;
+            left: 165px;
+        }
+    
+        .header__titulo {
+            font-size: 70px;  
+            font-family: var(--font-primary);
+            font-weight: bold;
+            position: absolute;
+            left: 480px;
+            top: 34px;
+            width: 550px;
+          
+           
+        }
+    
+        .header__fecha{
+            font-size: 20px;
+            width: 200px;
+            margin: 250px 0 0 325px; 
+        }
+    
+    
         
-        width: 320px;
-        margin-left:2px;
-    }
-
-    .menu__hamburger{
-        width: 48px;
-        height: 44px;
-        margin-left: 20px;
-        margin-right: 16px;
-        margin-top: 49px;
-    }
-
-    .menu__lupa{
-        width: 43px;
-        height: 43px;
-        margin-right: 6px;
-        margin-top: 54px;
-    }
-
-    .menu__search{
-        border: solid 0.1;
-        border-color: var(--color-gray);
-        border-style: none;
-        border-bottom: solid 0.1px;
-        position: absolute;
-        top: 47px;
-        left: 165px;
-    }
-
-    .header__titulo {
-        font-size: 70px;  
-        font-family: var(--font-primary);
-        font-weight: bold;
-        position: absolute;
-        left: 480px;
-        top: 34px;
-        width: 550px;
+      .temperatura{
+        width: 100px;
+        margin-top:55px;
+        margin-left: -200px;
+    
+    
+    
+    
+      }
+    
       
+      .temperatura__cloud{
+        
+          
+          width: 47px;
+          height: 47px;
+    
+          
+      }
+      
+      .temperatura__texto{
+      
+        display:inline;
+        margin-right:0px;
+        
+      
+      }
+    
+      .menu__search {
+    
+        width:130px;
+    
+      }
+       
+    
+      .principal{
+      
+          background-color: rgba(128, 128, 128, 0.219);
+         
+    
+      }
+      
+      .principal__encabezado{
+      
+    
+          text-align: center;
+          margin-top:250px;
+          margin-bottom: 30px;
+          margin-left:35px;
+          
+      }
+      
+      .principal__imagen {
+          width: 620px;
+          margin: 0 0 0 400px;
+       
+      }
+      
+      .principal__parrafo {
+          width: 500px;
+          margin: 50px 0 0 420px;
+      
+      }
+      
+      .principal__enlace {
+          display:block;
+          margin: 30px 0 0 420px;
+      }
+    
+     
+    /*noticia columna izquierda */
+    
+      .second{
+        width: 330px;
+        height: 606px;
+        border-right: solid 0.5px;
+        position:absolute;
+        top:250px;
+        left:30px;
+      
+    
+    }
+    
+    .second__encabezado{
+    
+    
+        margin-top:30px;
+        margin-bottom: 30px;
+    
+    
+    }
+    
+    .second__parrafo{
+    
+        width: 300px;    
+    
+    }
+    .second__enlace{
+        
+        display:block;
+        margin-top: 30px;
+    
+    
+    }
+    /* noticia columna derecha */
+    .third {
+       position:absolute;
+       top: 250px;
+       left:1070px;
+       border-left: solid 0.5px;
+       height: 606px;
+     
+    
        
     }
-
-    .header__fecha{
-        font-size: 20px;
-        width: 200px;
-        margin: 250px 0 0 325px; 
+    
+    .third__encabezado{
+        width:100px;
+        margin-top: 30px;
+        margin-left:225px;
+        margin-bottom:30px;
+        
     }
-
-
     
-  .temperatura{
-    width: 100px;
-    margin-top:55px;
-    margin-left: -200px;
-
-
-
-
-  }
-
-  
-  .temperatura__cloud{
+    .third__parrafo{
+        width: 300px;
+        margin-left: 20px;
+        text-align: right;
+       
+    }
+    
+    .third__enlace{
+    
+        display:block;
+        width: 100px;
+        margin-top: 30px;
+        margin-left: 255px;
+    }
+    
+    
+    .footer_parrafo {
+    
+      display:flex;
+      justify-content:center;
+      margin-top: 50px;
+    
+    
+    
+    }
     
       
-      width: 47px;
-      height: 47px;
-
-      
-  }
-  
-  .temperatura__texto{
-  
-    display:inline;
-    margin-right:0px;
     
-  
-  }
-
-  .menu__search {
-
-    width:130px;
-
-  }
-   
-
-  .principal{
-  
-      background-color: rgba(128, 128, 128, 0.219);
-     
-
-  }
-  
-  .principal__encabezado{
-  
-
-      text-align: center;
-      margin-top:250px;
-      margin-bottom: 30px;
-      margin-left:35px;
-      
-  }
-  
-  .principal__imagen {
-      width: 620px;
-      margin: 0 0 0 400px;
-   
-  }
-  
-  .principal__parrafo {
-      width: 500px;
-      margin: 50px 0 0 420px;
-  
-  }
-  
-  .principal__enlace {
-      display:block;
-      margin: 30px 0 0 420px;
-  }
-
- 
-/*noticia columna izquierda */
-
-  .second{
-    width: 330px;
-    height: 606px;
-    border-right: solid 0.5px;
-    position:absolute;
-    top:250px;
-    left:30px;
-  
-
-}
-
-.second__encabezado{
-
-
-    margin-top:30px;
-    margin-bottom: 30px;
-
-
-}
-
-.second__parrafo{
-
-    width: 300px;    
-
-}
-.second__enlace{
     
-    display:block;
-    margin-top: 30px;
-
-
-}
-/* noticia columna derecha */
-.third {
-   position:absolute;
-   top: 250px;
-   left:1070px;
-   border-left: solid 0.5px;
-   height: 606px;
- 
-
-   
-}
-
-.third__encabezado{
-    width:100px;
-    margin-top: 30px;
-    margin-left:225px;
-    margin-bottom:30px;
-    
-}
-
-.third__parrafo{
-    width: 300px;
-    margin-left: 20px;
-    text-align: right;
-   
-}
-
-.third__enlace{
-
-    display:block;
-    width: 100px;
-    margin-top: 30px;
-    margin-left: 255px;
-}
-
-
-.footer_parrafo {
-
-  display:flex;
-  justify-content:center;
-  margin-top: 50px;
-
-
-
-}
-
-  
-
-
-}
-
-
-
-
-
-
+    }
 
 /* ------------------------------------------------------------------------*/
