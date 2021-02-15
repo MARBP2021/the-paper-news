@@ -165,43 +165,15 @@ body {
         font-weight: 300;
     }
 
-    .iconify--hambuguer{
+    #menu-hamburguer{
 
-        margin-top:200px;
-
-
+        margin-top:10px;
+        margin-left:-136px;
+        margin-right: 0px;
     }
 
-    .menu {
-        margin-top: 50px;
 
 
-    }
-
-    .menu__hamburger{
-        width: 48px;
-        height: 44px;
-        margin-left: 20px;
-        margin-right: 16px;
-        margin-top: 49px;
-    }
-
-    .menu__lupa{
-        width: 43px;
-        height: 43px;
-        margin-right: 6px;
-        margin-top: 54px;
-    }
-
-    .menu__search{
-        border: solid 0.1;
-        border-color: var(--color-gray);
-        border-style: none;
-        border-bottom: solid 0.1px;
-        position: absolute;
-        top: 47px;
-        left: 165px;
-    }
 
     .header__titulo {
         font-size: 70px;  
@@ -417,8 +389,6 @@ body {
     justify-content:center;
     margin-top: 50px;
 
-
-
   }
 }
    
@@ -552,6 +522,19 @@ body {
         display: grid;
     }
 
+    .search-bar__input{
+        position:absolute;
+        top:15px;
+        left:-80px;
+
+    }
+    .search-bar__button{
+        position:absolute;
+        left:129px;
+        top:15px;
+    }
+
+
     .banner__description {
         font-size: 15px;
     }
@@ -595,37 +578,19 @@ body {
             font-weight: 300;
         }
     
-        .menu{
-            
-            width: 320px;
-            margin-left:2px;
-        }
+        .search-bar__input{
+            position:absolute;
+            top:5px;
+            left: 40px;
     
-        .menu__hamburger{
-            width: 48px;
-            height: 44px;
-            margin-left: 20px;
-            margin-right: 16px;
-            margin-top: 49px;
         }
-    
-        .menu__lupa{
-            width: 43px;
-            height: 43px;
-            margin-right: 6px;
-            margin-top: 54px;
+        .search-bar__button{
+            position:absolute;
+            left:240px;
+            top:5px;
         }
-    
-        .menu__search{
-            border: solid 0.1;
-            border-color: var(--color-gray);
-            border-style: none;
-            border-bottom: solid 0.1px;
-            position: absolute;
-            top: 47px;
-            left: 165px;
-        }
-    
+
+
         .header__titulo {
             font-size: 70px;  
             font-family: var(--font-primary);
