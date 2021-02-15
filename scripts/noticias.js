@@ -31,3 +31,22 @@ export let $description5 = document.querySelector('.article__introduction--descr
 export let $description6 = document.querySelector('.article__introduction--description6');
 export let $description7 = document.querySelector('.article__introduction--description7');
 
+
+//Top news
+
+export let $topNews1 = document.querySelector('#section__link--topApi1');
+export let $topNews2 = document.querySelector('#section__link--topApi2');
+export let $topNews3 = document.querySelector('#section__link--topApi3');
+export let $topNews4 = document.querySelector('#section__link--topApi4');
+export let $topNews5 = document.querySelector('#section__link--topApi5');
+
+
+//recent News 
+
+
+export let $recentNews1 = document.querySelector('#section__link--recentApi1');
+export let $recentNews2 = document.querySelector('#section__link--recentApi2');
+export let $recentNews3 = document.querySelector('#section__link--recentApi3');
+export let $recentNews4 = document.querySelector('#section__link--recentApi4');
+export let $recentNews5 = document.querySelector('#section__link--recentApi5');
+
