@@ -48,9 +48,9 @@ export default function getNews() {
     }
 
     
-    const News = (category, ArticleNum,rC1,rC2,rC3,LinkNum) => {
+    const News = async (category, ArticleNum,rC1,rC2,rC3,LinkNum) => {
         
-        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories}.json?limit=6&api-key=${apiKey}`);
+        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${category}.json?limit=6&api-key=${apiKey}`);
         const result = await api.json();
         
         Articles(ArticleNum,result);
