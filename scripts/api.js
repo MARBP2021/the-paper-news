@@ -6,7 +6,6 @@ const $recents = document.querySelectorAll('.recents a');
 const $link = document.querySelectorAll('.article__link');
 const $titleLink = document.querySelectorAll('.article--big__title')
 
-console.log($recents[0])
 
 
 export default function getNews() {

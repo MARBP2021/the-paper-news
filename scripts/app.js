@@ -8,6 +8,9 @@ function main () {
     toggleMenu();
     toggleSearch();
     getNews();
+
+   
+   
 }
 
 document.addEventListener('DOMContentLoaded', main)
