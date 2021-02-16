@@ -13,17 +13,14 @@ export default function getNews() {
     
     const apiKey = 'qT1M4S2fPd1JSAQF0AZL3sg36dqtC1aw';
 
-    const categories = [
-        'technology',
-        'science',
-        'arts',
-        /*
-        'health',
-        'movies',
-        'sports',
-        'travel'
-        */
-    ];
+    const categories = {
+        technology: 'technology',
+        science: 'science',
+        arts: 'arts'
+
+    }
+
+    const {technology, science, arts} = categories;
     
 
     const Articles = (n, result) => {
@@ -50,103 +47,21 @@ export default function getNews() {
          
     }
 
-
-    //tecnologia
-    const technologyNews = async n => {
+    
+    const News = (category, ArticleNum,rC1,rC2,rC3,LinkNum) => {
         
-        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[n]}.json?limit=6&api-key=${apiKey}`);
-        const result = await api.json();
-        
-        Articles(0,result);
-        rightColumn(0,1,2,result);
-        Links(0,result);        
-    }
-
-    // ciencias
-    const scienceNews = async n => {
-        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[n]}.json?limit=6&api-key=${apiKey}`);
-        const result = await api.json();
-
-        Articles(1,result);
-        rightColumn(1,2,3,result);
-        Links(1,result);      
-    }
-
-    //arte
-    const artsNews = async n => {
-        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[n]}.json?limit=6&api-key=${apiKey}`);
-
-        // Convierte el resultado en objeto
-        const result = await api.json();
-        Articles(2,result);
-        rightColumn(2,3,4,result);
-        Links(2,result);
-
-    }
-
-
-
-    // Noticias sobre salud
-    /* 
-    const healthNews = async n => {
-        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[n]}.json?limit=6&api-key=${apiKey}`);
-
-        // Convierte el resultado en objeto
+        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories}.json?limit=6&api-key=${apiKey}`);
         const result = await api.json();
         
-        Articles(3,result);
-        rightColumn(3,4,5,result);
-        Links(3,result);
-    }
-
-    //peliculas
-    const moviesNews = async n => {
-        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[n]}.json?limit=6&api-key=${apiKey}`);
-
-        // Convierte el resultado en objeto
-        const result = await api.json();
-
-        console.log(result)
-        Articles(4,result);
-        rightColumn(4,5,6,result);
-        Links(4,result);
-    }
-
-    // Noticias sobre deportes
-    const sportsNews = async n => {
-        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[n]}.json?limit=6&api-key=${apiKey}`);
-        const result = await api.json();
-
-        Articles(5,result);
-        rightColumn(5,6,7,result);
-        Links(5,result);
-    
-       
-    }
-
-    // Noticias sobre viajes
-    const travelNews = async n => {
-        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[n]}.json?limit=6&api-key=${apiKey}`);
-
-        // Convierte el resultado en objeto
-        const result = await api.json();
-    
-        Articles(6,result);
-        rightColumn(6,7,8,result);
-        Links(6,result);
-    
+        Articles(ArticleNum,result);
+        rightColumn(rC1,rC2,rC3,result);
+        Links(LinkNum,result);
 
     }
-    */
-
-    technologyNews(0);
-    scienceNews(1);
-    artsNews(2);
     
-    /*
-    healthNews(3);
-    moviesNews(4);
-    sportsNews(5);
-    travelNews(6);
-    */
+
+    News(technology,0,1,2,3,0);
+    News(science,1,2,3,4,1)
+    News(arts,2,3,4,5,2);
+    
 }
