@@ -304,6 +304,7 @@ div[data-position="center"] { /* Contenedor del titulo y fecha */
 
 .image {
     border-radius: 10px;
+    width: 100%;
 }
 
 /* Estilos de la barra de busqueda */
@@ -548,7 +549,6 @@ div[data-position="center"] { /* Contenedor del titulo y fecha */
     }
 }
 
-
 /* X-Large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
@@ -569,7 +569,6 @@ div[data-position="center"] { /* Contenedor del titulo y fecha */
         font-size: 30px;
     }
 }
-
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 

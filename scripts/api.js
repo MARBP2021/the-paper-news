@@ -1,261 +1,139 @@
-import {
-    
-    $title1, 
-    $title2, 
-    $title3, 
-    $title4, 
-    $title5, 
-    $title6, 
-    $title7,
+const $titles = document.querySelectorAll('.article__title a');
+const $images = document.querySelectorAll('.image');
+const $introductions = document.querySelectorAll('.article__introduction');
+const $tops = document.querySelectorAll('.tops a');
+const $recents = document.querySelectorAll('.recents a');
 
-    $image1,
-    $image2,
-    $image3,
-    $image4,
-    $image5,
-    $image6,
-    $image7,
-    
-    $description1,
-    $description2,
-    $description3,
-    $description4,
-    $description5,
-    $description6,
-    $description7,
-
-    $topNews1,
-    $topNews2,
-    $topNews3,
-    $topNews4,
-    $topNews5,
-
-    $recentNews1,
-    $recentNews2,
-    $recentNews3,
-    $recentNews4,
-    $recentNews5
-
-
-
-
-}   from './noticias.js';
-
-
-export const Api = () => {
-
-
+export default function getNews() {
     const apiKey = 'qT1M4S2fPd1JSAQF0AZL3sg36dqtC1aw';
-    const section = {
-        science: 'science',
-        technology: 'technology',
-        arts: 'arts',
-        health: 'health',
-        politics: 'politics',
-        sports: 'sports',
-        travel: 'travel',
-        world: 'world'
 
+    const categories = [
+        'technology',
+        'science',
+        'arts',
+        'health',
+        'movies',
+        'sports',
+        'travel'
+    ];
 
-    }
-    
-    const {arts, books, health, politics, science, sports, technology, travel, world} = section;
-
-    //noticias de ciencia.
+    // Noticias sobre tecnologia
     const technologyNews = async () => {
-        //ESTAS VARIABLES SE DECLARAN PARA QUE FORMEN PARTE DEL SCOPE DE ESTA MISMA FUNCION, SINO SE DECLARAN QUEDARAN COMO "undefined", ya que javascript no las encuentra.
-        $image1;
-        $title1;
-        $description1;
-        $recentNews1;
-        //peticion GET a la URL
-        const api = await fetch (`https://api.nytimes.com/svc/news/v3/content/all/${technology}.json?api-key=${apiKey}`)                                //apiKey //categoria = salud //paises = estados unidos, UK,  // lenguajes de las noticias = ingles.
-        //el resultado se convierte a JSON
-        
+        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[0]}.json?limit=6&api-key=${apiKey}`);
 
-        //AQUI SE EXTRAE EL CONTENIDO DE LA RESPUESTA(TITULO,IMAGEN,DESCRIPCION)
-        const result = await api.json();
-        const {results} = result;
-        const title = results[3].title;
-        const image = results[3].multimedia[2].url;
-        const description = results[3].abstract;
-        
-        //AQUI ESTAN LOS METODOS QUE REEMPLAZAN EL CONTENIDO DEL HTML
-        $title1.textContent = title;
-        $image1.setAttribute('src', `${image}`)
-        $description1.textContent = description;
-        $topNews1.textContent = title;
-        $recentNews1.textContent = title;
+        // Convierte el resultado en objeto
+        const results = await api.json();
 
+        // Reemplaza el contenido de articulos
+        $titles[0].textContent = results.results[0].title;
+        $images[0].setAttribute('src', `${results.results[0].multimedia[2].url}`);
+        $introductions[0].textContent = results.results[0].abstract;
+        // Reemplazar titulos de los tops
+        $tops[0].textContent = results.results[1].title;
+        // Reemplazar titulos de los recents
+        $recents[0].textContent = results.results[2].title;
     }
-    
-    // estas funciones mandan a llamar una URL(api), la cual trae una noticia y de esta extraemos la descripcion y el titulo.
-    
-    
-    //science
+
+    // Noticias sobre ciencias
     const scienceNews = async () => {
-        
-        $image2;
-        $title2;
-        $description2;
-        $topNews2;
-        $recentNews2;
+        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[1]}.json?limit=6&api-key=${apiKey}`);
 
+        // Convierte el resultado en objeto
+        const results = await api.json();
 
-        //peticion GET a la URL
-        const api = await fetch (`https://api.nytimes.com/svc/news/v3/content/all/${science}.json?api-key=${apiKey}`)                                //apiKey //categoria = salud //paises = estados unidos, UK,  // lenguajes de las noticias = ingles.
-        //el resultado se convierte a JSON
-        const result = await api.json();
-        
-        
-        const {results} = result;
-        const title = results[3].title;
-        const image = results[3].multimedia[2].url;
-        const description = results[3].abstract;
-        
-        $title2.textContent = title;
-        $image2.setAttribute('src', `${image}`)
-        $description2.textContent = description;
-        $topNews2.textContent = title;
-        $recentNews2.textContent = title;
+        // Reemplaza el contenido de articulos
+        $titles[1].textContent = results.results[0].title;
+        $images[1].setAttribute('src', `${results.results[0].multimedia[2].url}`);
+        $introductions[1].textContent = results.results[0].abstract;
+        // Reemplazar titulos de los tops
+        $tops[1].textContent = results.results[1].title;
+        // Reemplazar titulos de los recents
+        $recents[1].textContent = results.results[2].title;
     }
 
-    //noticias de negocios
+    //noticias sobre arte
     const artsNews = async () => {
-        $image3;
-        $title3;
-        $description3;
-        $topNews3;
-        $recentNews3;
-        //peticion GET a la URL
-        const api = await fetch (`https://api.nytimes.com/svc/news/v3/content/all/${arts}.json?api-key=${apiKey}`)                                //apiKey //categoria = salud //paises = estados unidos, UK,  // lenguajes de las noticias = ingles.
-        //el resultado se convierte a JSON
-        const result = await api.json();
-        const {results} = result;
-        const title = results[3].title;
-        const image = results[3].multimedia[2].url;
-        const description = results[3].abstract;
-        $title3.textContent = title;
-        $image3.setAttribute('src', `${image}`)
-        $description3.textContent = description;
-        $topNews3.textContent = title;
-        $recentNews3.textContent = title;
+        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[2]}.json?limit=6&api-key=${apiKey}`);
 
-    
+        // Convierte el resultado en objeto
+        const results = await api.json();
+
+        // Reemplaza el contenido de articulos
+        $titles[2].textContent = results.results[0].title;
+        $images[2].setAttribute('src', `${results.results[0].multimedia[2].url}`);
+        $introductions[2].textContent = results.results[0].abstract;
+        // Reemplazar titulos de los tops
+        $tops[2].textContent = results.results[1].title;
+        // Reemplazar titulos de los recents
+        $recents[2].textContent = results.results[2].title;
     }
 
-
-
+    // Noticias sobre salud
 
     const healthNews = async () => {
-        
-        $image4;
-        $title4;
-        $description4;
-        $topNews4;
-        $recentNews4;
-        
-        //peticion GET a la URL
-        
-        const api = await fetch (`https://api.nytimes.com/svc/news/v3/content/all/${health}.json?api-key=${apiKey}`)                                //apiKey //categoria = salud //paises = estados unidos, UK,  // lenguajes de las noticias = ingles.
-        //el resultado se convierte a JSON
-        const result = await api.json();
-        
-        const {results} = result;
-        const title = results[3].title;
-        const image = results[3].multimedia[2].url;
-        const description = results[3].abstract;
-        
-        $title4.textContent = title;
-        $image4.setAttribute('src', `${image}`)
-        $description4.textContent = description;
-        $topNews4.textContent = title;
-        $recentNews4.textContent = title;
-    
+        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[3]}.json?limit=6&api-key=${apiKey}`);
+
+        // Convierte el resultado en objeto
+        const results = await api.json();
+
+        // Reemplaza el contenido de articulos
+        $titles[3].textContent = results.results[0].title;
+        $images[3].setAttribute('src', `${results.results[0].multimedia[2].url}`);
+        $introductions[3].textContent = results.results[0].abstract;
+        // Reemplazar titulos de los tops
+        $tops[3].textContent = results.results[1].title;
+        // Reemplazar titulos de los recents
+        $recents[3].textContent = results.results[2].title;
     }
 
-    const worldNews = async () => {
-        
-        $image5;
-        $title5;
-        $description5;
-        $topNews5;
-        $recentNews5;
-        
-        
-        const api = await fetch (`https://api.nytimes.com/svc/news/v3/content/all/${world}.json?api-key=${apiKey}`)                         
-        
-        
-        const result = await api.json();
-        const {results} = result;
-        const title = results[2].title;
-        const image = results[2].multimedia[2].url;
-        const description = results[2].abstract;
-        
-        $title5.textContent = title;
-        $image5.setAttribute('src', `${image}`)
-        $description5.textContent = description;
-        $topNews5.textContent = title;
-        $recentNews5.textContent = title;
-        
-        
-    
+    // Noticias sobre peliculas
+    const moviesNews = async () => {
+        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[4]}.json?limit=6&api-key=${apiKey}`);
+
+        // Convierte el resultado en objeto
+        const results = await api.json();
+
+        // Reemplaza el contenido de articulos
+        $titles[4].textContent = results.results[0].title;
+        $images[4].setAttribute('src', `${results.results[0].multimedia[2].url}`);
+        $introductions[4].textContent = results.results[0].abstract;
+        // Reemplazar titulos de los tops
+        $tops[4].textContent = results.results[1].title;
+        // Reemplazar titulos de los recents
+        $recents[4].textContent = results.results[2].title;
     }
 
+    // Noticias sobre deportes
     const sportsNews = async () => {
-        $image6;
-        $title6;
-        $description6;
-      
+        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[5]}.json?limit=6&api-key=${apiKey}`);
 
-        const api = await fetch (`https://api.nytimes.com/svc/news/v3/content/all/${sports}.json?api-key=${apiKey}`)                   
-        const result = await api.json();
-        const {results} = result;
-        const title = results[3].title;
-        const image = results[3].multimedia[2].url;
-        const description = results[3].abstract;
-        
-        $title6.textContent = title;
-        $image6.setAttribute('src', `${image}`)
-        $description6.textContent = description;
-    
+        // Convierte el resultado en objeto
+        const results = await api.json();
+
+        // Reemplaza el contenido de articulos
+        $titles[5].textContent = results.results[0].title;
+        $images[5].setAttribute('src', `${results.results[0].multimedia[2].url}`);
+        $introductions[5].textContent = results.results[0].abstract;
     }
 
+    // Noticias sobre viajes
     const travelNews = async () => {
-        
-        $image7;
-        $title7;
-        $description7;
-     
-        //peticion GET a la URL
-        const api = await fetch (`https://api.nytimes.com/svc/news/v3/content/all/${travel}.json?api-key=${apiKey}`)                                //apiKey //categoria = salud //paises = estados unidos, UK,  // lenguajes de las noticias = ingles.
-        //el resultado se convierte a JSON
-        const result = await api.json();
-        const {results} = result;
-        const title = results[3].title;
-        const image = results[3].multimedia[2].url;
-        const description = results[3].abstract;
-        
-        $title7.textContent = title;
-        $image7.setAttribute('src', `${image}`)
-        $description7.textContent = description;
-        
+        const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${categories[6]}.json?limit=6&api-key=${apiKey}`);
 
+        // Convierte el resultado en objeto
+        const results = await api.json();
+
+        // Reemplaza el contenido de articulos
+        $titles[6].textContent = results.results[0].title;
+        $images[6].setAttribute('src', `${results.results[0].multimedia[2].url}`);
+        $introductions[6].textContent = results.results[0].abstract;
     }
 
-
-
-
-
-
-
-
-    
     technologyNews();
     scienceNews();
     artsNews();
     healthNews();
-    worldNews();
+    moviesNews();
     sportsNews();
     travelNews();
 }
