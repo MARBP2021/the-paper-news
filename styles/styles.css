@@ -201,6 +201,7 @@ div[data-position="center"] { /* Contenedor del titulo y fecha */
 .article {
     display: grid;
     grid-gap: 30px;
+    height: fit-content;
 }
 
 .article--big {
