@@ -35,7 +35,6 @@ export default function getNews() {
         const api = await fetch(`https://api.nytimes.com/svc/news/v3/content/all/${category}.json?limit=6&api-key=${apiKey}`);
 
         const result = await api.json();
-        console.log(result)
 
         drawArticles(article, result);
         drawLinks(index, result);
